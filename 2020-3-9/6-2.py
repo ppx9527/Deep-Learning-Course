@@ -1,6 +1,7 @@
 from matplotlib import pyplot as plt
 import tensorflow as tf
 
+plt.style.use('seaborn')
 buston_housing = tf.keras.datasets.boston_housing
 (x, y), (_, _) = buston_housing.load_data(test_split=0)
 titles = ["CRIM", "ZN", "INDUS", "CHAS", "NOX", "RM", "AGE",
