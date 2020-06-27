@@ -1,4 +1,4 @@
-##文件说明
+## 文件说明
 ### style-transfer.py
 这是用TensorFlow实现的，参考了TensorFlow的官方教程，但算法有很多可以优化的地方，总变分损失的优化不好，产生了较多的高频残差，
 核心原理是基于Gatys的论文[A Neural Algorithm of Artistic Style]。<br>
