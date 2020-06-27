@@ -7,8 +7,8 @@ from scipy.optimize import fmin_l_bfgs_b
 from tensorflow.keras import backend as K
 from tensorflow.keras.applications import vgg19
 
-base_image_path = '图像风格迁移/Sunlit-Mountains.jpg'
-style_reference_image_path = '图像风格迁移/seated-nude.jpg'
+base_image_path = 'image/Sunlit-Mountains.jpg'
+style_reference_image_path = 'image/seated-nude.jpg'
 result_prefix = 's'
 iterations = 1
 
