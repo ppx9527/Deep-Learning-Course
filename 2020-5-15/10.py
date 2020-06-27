@@ -1,5 +1,4 @@
 import os
-from datetime import datetime
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import tensorflow as tf
@@ -48,10 +47,10 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dropout(rate=0.2),
     tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
 
-    # 添加平坦层：input(n, 8, 8, 64) -reshape(n, -1)- output(n, 4096)
+    # 添加平坦层：input(n, 4, 4, 128) -reshape(n, -1)- output(n, 2048)
     tf.keras.layers.Flatten(),
 
-    # 全连接层：input(n, 4096) => output(n, 64)
+    # 全连接层：input(n, 2048) => output(n, 512) => output(n, 64) => output(n, 10)
     tf.keras.layers.Dense(units=512, activation=tf.nn.relu),
     tf.keras.layers.Dropout(0.5),
     tf.keras.layers.Dense(units=64, activation=tf.nn.relu),
